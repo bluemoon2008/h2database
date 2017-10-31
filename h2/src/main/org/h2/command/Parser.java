@@ -2098,7 +2098,8 @@ public class Parser {
                     do {
                         readIdentifierWithSchema();
                     } while (readIf(","));
-                } else if (readIf("NOWAIT")) {
+                }
+                if (readIf("NOWAIT")) {
                     // TODO parser: select for update nowait: should not wait
                 }
                 command.setForUpdate(true);
